@@ -43,7 +43,7 @@ Notification.requestPermission(function(result) {
     let notification   
     document.addEventListener("visibilitychange", () => {
       if (document.visibilitystate === "hidden") {
-        notification = new Notification("Mystic Minds", {
+        notification = new Notification("Mystic Minds Location Coming Soon...", {
           body: "We will update location soon.",
           tag: "Mystic Minds",
         })
