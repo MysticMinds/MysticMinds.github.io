@@ -20,9 +20,18 @@
 
 button.addEventListener("click", () => {
   Notification.requestPermission().then(perm => {
-    alert(perm)
+    if (perm === "granted") {
+      const notification = new Notification("Location coming soon...", {
+        body: Math.random(),
+        data: { hello: "world" },
+         })
+      notification.addEventListener("error", e => {
+        alert("error")
+      })
+    }
   })
 })
+    
     let notification   
     document.addEventListener("visibilitychange", () => {
       if (document.visibilitystate === "hidden") {
