@@ -7,7 +7,7 @@
   font-size: 300%;
 }
   h1 {
-  border: 2px solid red;
+  border: 2px solid yellow;
 }
 </style>
 <html>
@@ -20,7 +20,7 @@
 
 button.addEventListener("click", () => {
   Notification.requestPermission().then(perm => {
-    if (perm === "granted") {
+    if (perm === "Granted!") {
       const notification = new Notification("MYSTIC MINDS ICE CREAM AND PRIME", {
         body: ("Location coming soon..."),
         data: { hello: "world" },
@@ -34,7 +34,7 @@ button.addEventListener("click", () => {
 let notification
 navigator.serviceWorker.register("sw.js");
 Notification.requestPermission(function(result) {
-  if (result === 'Granted!') {
+  if (result === 'granted') {
   document.addEventListener("visibilitychange", () => {
   if (document.visibilitystate === "hidden") {
     navigator.serviceWorker.ready.then(function(registration) {
