@@ -21,8 +21,8 @@
 button.addEventListener("click", () => {
   Notification.requestPermission().then(perm => {
     if (perm === "granted") {
-      const notification = new Notification("Location coming soon...", {
-        body: Math.random(),
+      const notification = new Notification("MYSTIC MINDS ICE CREAM AND PRIME", {
+        body: ("Location coming soon..."),
         data: { hello: "world" },
          })
       notification.addEventListener("error", e => {
