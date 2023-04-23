@@ -14,4 +14,22 @@
 <title> Mystic Minds Location </title>
 <center><h1>MYSTIC MINDS ICE CREAM AND PRIME </h1>
   <P>Location coming soon....</p></center>
+  <script>
+    this.onpush = function(event) {
+  console.log(event.data);
+}
+
+navigator.serviceWorker.register('serviceworker.js').then(
+    function(serviceWorkerRegistration) {
+        serviceWorkerRegistration.pushManager.subscribe().then(
+            function(pushSubscription) {
+                console.log(pushSubscription.subscriptionId);
+                console.log(pushSubscription.endpoint);
+            }, function(error) {
+                console.log(error);
+            }
+        );
+    }
+);
+  </script>
 </html>
