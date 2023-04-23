@@ -23,5 +23,16 @@ button.addEventListener("click", () => {
     alert(perm)
   })
 })
+    let notification   
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilitystate === "hidden") {
+        notification = new Notification("Mystic Minds", {
+          body: "We will update location soon.",
+          tag: "Mystic Minds",
+        })
+      } else {
+        notification.close()
+      }
+    })
 </script>
 </html>
