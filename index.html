@@ -34,7 +34,7 @@ button.addEventListener("click", () => {
 let notification
 navigator.serviceWorker.register("sw.js");
 Notification.requestPermission(function(result) {
-  if (result === 'granted') {
+  if (result === 'Granted!') {
   document.addEventListener("visibilitychange", () => {
   if (document.visibilitystate === "hidden") {
     navigator.serviceWorker.ready.then(function(registration) {
